@@ -1,0 +1,20 @@
+# GitLab Pages deployment for Nimbus Weather
+# This CI/CD pipeline builds and deploys the static site to GitLab Pages.
+
+stages:
+  - deploy
+
+pages:
+  stage: deploy
+  script:
+    # Ensure the public directory contains the built files
+    # Since this is a static site, no build step is required
+    - echo "Deploying static site to GitLab Pages..."
+    - mkdir -p public
+    - cp -r *.html *.json *.css *.js assets/ public/ 2>/dev/null || true
+    - cp -r css js assets public/ 2>/dev/null || true
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH

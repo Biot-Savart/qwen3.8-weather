@@ -1,0 +1,16 @@
+{
+	"name": "nimbus-weather",
+	"version": "1.0.0",
+	"description": "Interactive weather app built with vanilla JavaScript",
+	"private": true,
+	"scripts": {
+		"start": "npx serve . -l 8080",
+		"serve": "python -m http.server 8080"
+	},
+	"keywords": [
+		"weather",
+		"open-meteo",
+		"vanilla-js"
+	],
+	"license": "MIT"
+}
