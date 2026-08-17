@@ -1,0 +1,18 @@
+{
+	"name": "Nimbus Weather",
+	"short_name": "Nimbus",
+	"description": "Interactive weather app powered by Open-Meteo",
+	"start_url": "./",
+	"scope": "./",
+	"display": "standalone",
+	"background_color": "#0b1424",
+	"theme_color": "#0d1830",
+	"icons": [
+		{
+			"src": "./assets/icon.svg",
+			"sizes": "any",
+			"type": "image/svg+xml",
+			"purpose": "any maskable"
+		}
+	]
+}
